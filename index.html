@@ -5,8 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chuck Jokes Vue</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1></h1>
+    <div id="app" class="container">
+        <h1>{{ title }}</h1>
+       <ul class="jokes-list">
+            <li v-for="joke in chuck" :key="joke.value" class="joke-item">
+                {{ joke.value }}
+            </li>
+       </ul>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
